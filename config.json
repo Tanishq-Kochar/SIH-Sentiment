@@ -1,0 +1,13 @@
+{
+  "colab_backend_url": "https://your-ngrok-url.ngrok.io/analyze",
+  "instructions": [
+    "1. Run the Colab notebook and get the ngrok URL",
+    "2. Replace 'your-ngrok-url' with your actual ngrok URL",
+    "3. Save this file",
+    "4. Start your Next.js frontend"
+  ],
+  "example_urls": [
+    "https://abc123.ngrok.io/analyze",
+    "https://def456.ngrok.io/analyze"
+  ]
+}
