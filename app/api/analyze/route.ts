@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
     pythonFormData.append("file", file)
 
     // Replace with your Colab ngrok URL
-    const pythonBackendUrl = process.env.PYTHON_BACKEND_URL || "https://d2d6464b7ab1.ngrok-free.app/analyze"
+    const pythonBackendUrl = process.env.PYTHON_BACKEND_URL || "https://5a422dbe0527.ngrok-free.app/analyze"
 
     const response = await fetch(pythonBackendUrl, {
       method: "POST",
