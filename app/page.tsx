@@ -22,13 +22,15 @@ export default function HomePage() {
       })
 
       if (!response.ok) {
-        throw new Error("Analysis failed")
+        throw new Error(`Analysis failed: ${response.statusText}`)
       }
 
       const data = await response.json()
       setAnalysisData(data)
     } catch (error) {
       console.error("Error analyzing file:", error)
+      // You could add a toast notification here for better UX
+      alert("Analysis failed. Please check your file format and try again.")
     } finally {
       setIsLoading(false)
     }
@@ -38,7 +40,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-background">
       <Header />
       <main className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="max-w-6xl mx-auto space-y-8">
           <div className="text-center space-y-4">
             <h1 className="text-4xl font-bold text-foreground">eConsultation Analysis Platform</h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
